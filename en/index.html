@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vdoh yoga studio</title>
+<meta name="description" content="Yoga in small groups of up to 12 people, a warm studio and a trial class for $10. A schedule with one-click booking. Good even if you’ve never done yoga.">
+<link rel="canonical" href="https://moonbern777.github.io/vdoh-yoga/en/">
+<meta name="theme-color" content="#fbf5ee">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Vdoh Yoga Studio">
+<meta property="og:url" content="https://moonbern777.github.io/vdoh-yoga/en/">
+<meta property="og:title" content="A place to breathe out">
+<meta property="og:description" content="Small groups of up to 12 people, a warm studio and a trial class for $10.">
+<link rel="preload" href="../fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/commissioner-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+  // Decide day or night before the first paint, so the page never flashes the wrong sky.
+  (function () {
+    var h = new Date().getHours();
+    var dark = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches;
+    var root = document.documentElement;
+    root.dataset.sky = dark || h >= 21 || h < 6 ? 'night' : 'day';
+    root.classList.add('js');
+    setTimeout(function () {
+      if (!window.vdohReady) root.classList.remove('js');
+    }, 4000);
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<canvas class="sky" id="sky" aria-hidden="true"></canvas>
+
+<header class="site-header" id="header">
+  <a class="logo" href="#top" aria-label="Vdoh, home page"><i id="logo-dot"></i>vdoh</a>
+  <nav class="nav" id="nav" aria-label="Site sections">
+    <a href="#dirs">Styles</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#passes">Passes</a>
+    <a href="#teachers">Teachers</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <a class="btn btn-small header-cta" href="#schedule"><span>Book</span></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><i></i><i></i></button>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="breath-word" aria-hidden="true"><b id="word">breathe in</b><span id="count">4</span></div>
+
+    <div class="hero-copy">
+      <h1 class="hero-title" data-hero-title>A place to <em>breathe out</em></h1>
+      <p class="hero-lead">Small groups of up to 12 people, a warm studio and teachers who remember your name. Good even if you’ve never done yoga.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#schedule"><span>See the schedule</span></a>
+        <button class="link" type="button" id="start-minute">Breathe for a minute</button>
+      </div>
+    </div>
+
+    <ul class="horizon">
+      <li><b>up to 12 people</b><span>in a group, so the teacher can see everyone</span></li>
+      <li><b>$10</b><span>first trial class, mat included</span></li>
+      <li><b>7:30–21:00</b><span>classes every day, weekends included</span></li>
+    </ul>
+  </section>
+
+  <section class="dirs-sec" id="dirs" aria-labelledby="dirs-title">
+    <h2 id="dirs-title" data-mist>Find your rhythm</h2>
+    <ul class="dirs" id="dir-list">
+      <li class="dir" data-rate=".42" data-height=".22">
+        <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1000 120" aria-hidden="true"><path/></svg>
+        <div class="dir-name">
+          <svg class="phase" viewBox="0 0 54 54" aria-hidden="true"><path fill="currentColor" d="M27 4a23 23 0 1 0 0 46 18 23 0 0 1 0-46z"/></svg>
+          <h3>Yin yoga</h3>
+        </div>
+        <p>Long holds and deep relaxation. The best class for the end of a workday.</p>
+        <div class="power" aria-label="Intensity 1 of 5"><span>Effort</span><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      </li>
+      <li class="dir" data-rate=".8" data-height=".42">
+        <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1000 120" aria-hidden="true"><path/></svg>
+        <div class="dir-name">
+          <svg class="phase" viewBox="0 0 54 54" aria-hidden="true"><path fill="currentColor" d="M27 4a23 23 0 0 0 0 46z"/><circle cx="27" cy="27" r="22.500" fill="none" stroke="currentColor"/></svg>
+          <h3>Hatha</h3>
+        </div>
+        <p>Classic poses at a calm pace. Strengthens your back and teaches you to listen to your body.</p>
+        <div class="power" aria-label="Intensity 2 of 5"><span>Effort</span><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+      </li>
+      <li class="dir" data-rate="1.7" data-height=".82">
+        <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1000 120" aria-hidden="true"><path/></svg>
+        <div class="dir-name">
+          <svg class="phase" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="23" fill="currentColor"/></svg>
+          <h3>Vinyasa</h3>
+        </div>
+        <p>Smooth flows that follow your breath. Warms you up and gives you energy for the whole day.</p>
+        <div class="power" aria-label="Intensity 4 of 5"><span>Effort</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+      </li>
+      <li class="dir" data-rate=".55" data-height=".26">
+        <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1000 120" aria-hidden="true"><path/></svg>
+        <div class="dir-name">
+          <svg class="phase" viewBox="0 0 54 54" aria-hidden="true"><path fill="currentColor" d="M4 40a23 23 0 0 1 46 0z"/><path stroke="currentColor" stroke-width="2.400" d="M2 46h50"/></svg>
+          <h3>For beginners</h3>
+        </div>
+        <p>We go over the basics and breathing from zero. A course of 8 classes that builds up slowly.</p>
+        <div class="power" aria-label="Intensity 1 of 5"><span>Effort</span><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sched" id="schedule" aria-labelledby="schedule-title">
+    <h2 id="schedule-title" data-mist>Book in one click</h2>
+    <div class="sched-bar">
+      <div class="days" id="days" role="tablist" aria-label="Day of the week"><i class="day-sun" id="day-sun" aria-hidden="true"></i></div>
+      <div class="filters" id="filters" role="group" aria-label="Style">
+        <button class="filter" type="button" data-dir="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-dir="hatha" aria-pressed="false">Hatha</button>
+        <button class="filter" type="button" data-dir="vinyasa" aria-pressed="false">Vinyasa</button>
+        <button class="filter" type="button" data-dir="yin" aria-pressed="false">Yin</button>
+        <button class="filter" type="button" data-dir="new" aria-pressed="false">Beginners</button>
+      </div>
+    </div>
+    <ul class="classes" id="classes" aria-live="polite"></ul>
+  </section>
+
+  <section class="passes-sec" id="passes" aria-labelledby="passes-title">
+    <div class="pass-side">
+      <h2 id="passes-title" data-mist>Which pass saves you more?</h2>
+      <label for="visits">How many times a week do you want to come?</label>
+      <div class="visits-wrap">
+        <input id="visits" type="range" min="1" max="5" step="1" value="2">
+        <div class="ticks" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+      </div>
+      <output class="verdict" for="visits"><b id="verdict-name"></b><span id="verdict-note"></span></output>
+    </div>
+    <ul class="pass-list" id="pass-list"></ul>
+  </section>
+
+  <section class="teachers-sec" id="teachers" aria-labelledby="teachers-title">
+    <h2 id="teachers-title" data-mist>Who you’ll practice with</h2>
+    <ul class="teachers">
+      <li class="teacher"><div class="aura aura-1" aria-hidden="true"><span>M</span></div><h3>Marina</h3><p>Hatha and yoga for the back. Teaching for 11 years, trained in Rishikesh.</p></li>
+      <li class="teacher"><div class="aura aura-2" aria-hidden="true"><span>D</span></div><h3>Daniel</h3><p>Vinyasa. A former gymnast who explains hard flows in simple words.</p></li>
+      <li class="teacher"><div class="aura aura-3" aria-hidden="true"><span>A</span></div><h3>Alina</h3><p>Yin yoga and classes for beginners. A calm voice and an eye for detail.</p></li>
+    </ul>
+    <p class="note">On a real site, this is where photos of the teachers and the studio will go.</p>
+  </section>
+
+  <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+    <h2 id="reviews-title" data-mist>After class</h2>
+    <ul class="quotes">
+      <li class="quote"><blockquote data-words>I came with a bad back, afraid I was the least flexible person there. Two months later, I stopped taking painkillers after work.</blockquote><cite>Olga, 41</cite></li>
+      <li class="quote"><blockquote data-words>I go to yin on Tuesdays instead of watching TV in the evening. I sleep much better, and it’s my one hour without a phone.</blockquote><cite>Paul, 35</cite></li>
+      <li class="quote"><blockquote data-words>Small groups make all the difference: Daniel corrects every pose, and in six months I did my first headstand.</blockquote><cite>Kristina, 28</cite></li>
+    </ul>
+    <p class="note">This is a demo concept: on a real site, this is where your students’ real reviews will go.</p>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" data-mist>Before your first class</h2>
+    <div class="faq-list">
+      <details open><summary>I’m not flexible at all. Can I come?</summary><p>Yes. Flexibility comes with practice, and you don’t need it to start. Begin with the beginners’ group or hatha.</p></details>
+      <details><summary>What should I bring?</summary><p>Comfortable clothes and a water bottle. We have mats, blocks and blankets at the studio. We practice barefoot.</p></details>
+      <details><summary>Is there a shower and changing room?</summary><p>Yes, two changing rooms and a shower. Bring a towel or ask at the front desk.</p></details>
+      <details><summary>Can I pause my pass?</summary><p>Yes, passes of 8 classes or more can be paused once, for up to 14 days.</p></details>
+    </div>
+  </section>
+
+  <section class="first" id="first" aria-labelledby="first-title">
+    <h2 id="first-title" data-mist>Your first class for $10</h2>
+    <p>Pick a good time in the schedule. Come 15 minutes early: we’ll show you the studio and give you a mat.</p>
+    <a class="btn" href="#schedule"><span>Choose a time</span></a>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer-word" aria-hidden="true">vdoh</p>
+  <div class="footer-grid">
+    <div><h3>Address</h3><p>7 Quiet Lane<br>Every day 7:00–22:00</p></div>
+    <div><h3>Contact</h3><p>+1 000 000 0000</p><a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <div class="footer-fine"><span>© 2026 Vdoh Yoga Studio</span><span>Demo concept for a portfolio. This studio is made up.</span></div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+10000000000">Call</a>
+  <a href="#schedule">Book</a>
+</nav>
+
+<dialog class="book-dialog" id="book-dialog" aria-labelledby="book-title">
+  <form class="book-box" id="book-form">
+    <h3 id="book-title">Book a class</h3>
+    <p id="book-info"></p>
+    <div class="field"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+    <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required minlength="10" placeholder="+1 000 000 0000"></div>
+    <div class="box-actions"><button class="link" type="button" data-close>Cancel</button><button class="btn" type="submit"><span>Book</span></button></div>
+  </form>
+  <div class="done-box" id="book-done" hidden>
+    <h3>Your mat is waiting</h3>
+    <p id="book-done-text"></p>
+    <p class="done-demo">This is a demo: on a real site, the booking goes straight into the studio’s schedule.</p>
+    <div class="box-actions"><button class="btn" type="button" data-close><span>Done</span></button></div>
+  </div>
+</dialog>
+
+<dialog class="minute" id="minute" aria-label="A minute of breathing">
+  <div class="minute-in">
+    <p class="minute-progress" id="minute-progress">Cycle 1 of 5</p>
+    <div class="minute-stage" id="minute-stage" aria-live="polite">
+      <b id="m-word">breathe in</b><span id="m-count">4</span>
+    </div>
+    <div class="minute-end" id="minute-end" hidden>
+      <h3>This is what a minute for yourself feels like</h3>
+      <p>A class has sixty minutes like this. The first one costs $10.</p>
+    </div>
+    <button class="link" type="button" id="minute-close">Finish</button>
+  </div>
+</dialog>
+
+<script src="../vendor/gsap.min.js" defer></script>
+<script src="../vendor/ScrollTrigger.min.js" defer></script>
+<script src="../vendor/SplitText.min.js" defer></script>
+<script src="../vendor/lenis.min.js" defer></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
